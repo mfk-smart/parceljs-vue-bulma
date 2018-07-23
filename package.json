@@ -1,0 +1,33 @@
+{
+  "name": "parceljs-vue-bulma",
+  "version": "1.0.0",
+  "description": "A simple boilerplate for front-end development using Vue.js and Bulma",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mfk-smart/parceljs-vuejs-bulma.git"
+  },
+  "keywords": [
+    "vue.js",
+    "parcel",
+    "bulma",
+    "html5"
+  ],
+  "author": "M. Fatih KILIC",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mfk-smart/parceljs-vuejs-bulma/issues"
+  },
+  "homepage": "https://github.com/mfk-smart/parceljs-vuejs-bulma#readme",
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "vue": "^2.5.16"
+  },
+  "alias": {
+    "vue" : "./node_modules/vue/dist/vue.common.js"
+  }
+}
