@@ -8,12 +8,15 @@ This is a basic starter template to be used in small front-end web application d
 
 ## Installation
 
-Just clone the files from git repo and run `npm install`
+Just clone the files from git repo and run `npm install`.
 
 ```bash
 #Clone the repository
 
 git clone https://github.com/mfk-smart/parceljs-vue-bulma.git
+
+#Change to folder
+cd parceljs-vue-bulma
 
 #Install using npm
 npm install
