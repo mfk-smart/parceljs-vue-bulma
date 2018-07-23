@@ -32,16 +32,18 @@ npm run build
 
 ```
 Root
-├── .git               (git folder)
-├── .cache             (cache folder, created by parcel after build, git ignored)
-├── dist               (distribution folder, created by parcel after build, git ignored)
-├── node_modules       (git ignored)
+├── .git                    (git folder)
+├── .cache                  (cache folder, created by parcel after build, git ignored)
+├── dist                    (distribution folder, created by parcel after build, git ignored)
+├── node_modules            (git ignored)
 ├── src
 │   ├── js
+│   │   └── app.js
 │   ├── css
-│   └── index.html     (entry point)
+│   │   └── customs.scss
+│   └── index.html          (entry point)
 ├── .gitignore
-├── README.md          (this file)
+├── README.md               (this file)
 ├── package-lock.json
 └── package.json
 ```
