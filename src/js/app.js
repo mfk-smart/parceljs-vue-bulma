@@ -1,12 +1,8 @@
-import Vue from "vue"
+import Vue from 'vue'
 
-new Vue({
-
-  el:"#app",
+Vue({
+  el: '#app',
   data: {
-
-    message: "Hello world!"
-
+    message: 'Hello world!'
   }
-
-});
+})
