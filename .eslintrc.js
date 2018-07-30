@@ -4,7 +4,7 @@ module.exports = {
         "plugin:vue/essential"
     ],
     "rules": {
-
-        "space-before-function-paren":["error", "never"]
+      "space-before-function-paren":["error", "never"],
+      "comma-dangle":["error","always-multiline"]
     }
 };

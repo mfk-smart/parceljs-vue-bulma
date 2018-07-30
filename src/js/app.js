@@ -1,8 +1,9 @@
 import Vue from 'vue'
 
-Vue({
+// eslint-disable-next-line
+new Vue({
   el: '#app',
   data: {
-    message: 'Hello world!'
-  }
+    message: 'Hello world!',
+  },
 })
