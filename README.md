@@ -28,6 +28,22 @@ npm run dev
 npm run build
 ```
 
+## Linting and Formatting
+
+I'm using `ESLint` and `Prettier` for code linting and formatting. Following is the lines from my `.vimrc` configuration to  use ALE, ESLint and Prettier together:
+
+```vim
+
+"... Install ALE and vim-prettier
+Plug 'w0rp/ale'
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }
+
+"... Select linter and fixer
+let g:ale_linters              = { 'javascript': ['eslint'] }
+let g:ale_fixers               = { 'javascript': ['prettier'] }
+
+```
+
 ## File Structure
 
 ```
@@ -42,7 +58,9 @@ Root
 │   ├── css
 │   │   └── customs.scss
 │   └── index.html          (entry point)
+├── .eslintrc.js            (ESLint configuration)
 ├── .gitignore
+├── .prettierrc.js          (Prettier configuration)
 ├── README.md               (this file)
 ├── package-lock.json
 └── package.json
