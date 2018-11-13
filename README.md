@@ -30,7 +30,7 @@ npm run build
 
 ## Scripts Usage
 
-You can generate pages and components quick by using the following commands:
+You can generate pages and components quickly by using the following commands:
 
 ```
 # Generate page with route and store files
