@@ -55,7 +55,7 @@ npm run subcomponent-create -- -n SampleComponent -s
 # Just generate page and store file
 # This one will not add import strings to main store.
 
-npm run subcomponent-create -- -n SamplePage
+npm run subcomponent-create -- -n SampleComponent
 ```
 
 ## Linting and Formatting
