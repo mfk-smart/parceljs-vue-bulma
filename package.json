@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "page-create": "./scripts/create_page.sh",
+    "subcomponent-create": "./scripts/create_subcomponent.sh"
   },
   "repository": {
     "type": "git",
@@ -24,22 +26,29 @@
   },
   "homepage": "https://github.com/mfk-smart/parceljs-vuejs-bulma#readme",
   "dependencies": {
-    "bulma": "^0.7.1",
-    "vue": "^2.5.16"
+    "bulma": "^0.7.2",
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.1",
+    "vue-moment": "^4.0.0",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
+    "@vue/component-compiler-utils": "^2.3.0",
+    "eslint": "^5.8.0",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0",
-    "eslint-plugin-vue": "^5.0.0-beta.1",
-    "node-sass": "^4.9.2",
-    "parcel": "^1.9.7",
-    "prettier": "1.14.0"
+    "eslint-plugin-vue": "^5.0.0-beta.3",
+    "node-sass": "^4.10.0",
+    "parcel": "^1.10.3",
+    "prettier": "1.14.0",
+    "pug": "^2.0.3",
+    "vue-template-compiler": "^2.5.17"
   }
 }

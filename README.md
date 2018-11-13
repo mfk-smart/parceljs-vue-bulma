@@ -28,6 +28,36 @@ npm run dev
 npm run build
 ```
 
+## Scripts Usage
+
+You can generate pages and components quick by using the following commands:
+
+```
+# Generate page with route and store files
+# Route and store import strings are also added to main route and store.
+
+npm run page-create -- -n SamplePage -r -s
+
+# Just generate page with route and store files
+# This one will not add import strings to main route or store.
+
+npm run page-create -- -n SamplePage
+```
+
+Similar approach is used for component generation. There's no route option.
+
+```
+# Generate component with store file
+# Store import string is also added to main store.
+
+npm run subcomponent-create -- -n SampleComponent -s
+
+# Just generate page and store file
+# This one will not add import strings to main store.
+
+npm run subcomponent-create -- -n SamplePage
+```
+
 ## Linting and Formatting
 
 I'm using `ESLint` and `Prettier` for code linting and formatting. Following is the lines from my `.vimrc` configuration to  use ALE, ESLint and Prettier together:
@@ -52,12 +82,21 @@ Root
 ├── .cache                  (cache folder, created by parcel after build, git ignored)
 ├── dist                    (distribution folder, created by parcel after build, git ignored)
 ├── node_modules            (git ignored)
+├── scripts                 (bash scripts to create create page and subcomponents)
 ├── src
-│   ├── js
-│   │   └── app.js
+│   ├── app.js
+│   ├── components
+│   │   ├── pages
+│   │   └── subcomponents
 │   ├── css
 │   │   └── customs.scss
+│   ├── images
+│   ├── router
+│   │   └── index.js
+│   ├── store
+│   │   └── index.js
 │   └── index.html          (entry point)
+├── templates               (template files to be used for pages and subcomponents
 ├── .eslintrc.js            (ESLint configuration)
 ├── .gitignore
 ├── .prettierrc.js          (Prettier configuration)
