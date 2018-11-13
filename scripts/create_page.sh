@@ -1,7 +1,7 @@
 #!/bin/bash
-while getopts ":p:sr" opt; do
+while getopts ":n:srh" opt; do
     case $opt in
-    p)
+    n)
         page=$OPTARG
         pages_path="./src/components/pages/"
         path=$(pwd)
@@ -63,6 +63,12 @@ while getopts ":p:sr" opt; do
         '"\ \ \ \ $page"',
         ' $router_path
         echo Page route is created and added to main route.
+        ;;
+    h)
+        printf "Usage: create_page.sh -n PageName\n\n"
+        printf "   -s: Create and import store file\n"
+        printf "   -r: Create and import route file\n"
+        printf "   -h: Display help text\n"
         ;;
     \?)
         echo "Invalid option -$OPTARG"

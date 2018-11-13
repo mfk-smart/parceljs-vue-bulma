@@ -33,15 +33,16 @@ while getopts ":n:sh" opt; do
         cat "${subcomponent_template}/store/index.js" >./store/index.js 
 
         #add store import string
-        sed -i '' -e '/StoreImports/ a'\
-        "import ${subcomponent} from '../components/subcomponent/'${subcomponent}'/store'"
-        ${store_path}
+        sed -i '' -e '/StoreImports/ a\
+        import '"$subcomponent"' from '"'"'../components/pages/'$subcomponent'/store'"'"'
+        ' $store_path
 
         #add module
-        sed -i "" -e "/modules: {/ a"\
-        "\ \ \ \ ${subcomponent}",
-        ${store_path}
-        echo "Subcomponent store is created and added to root store."
+        sed -i '' -e '/modules: {/ a\
+        '"\ \ \ \ $subcomponent"',
+        ' $store_path
+        echo Subcomponent store is created and added to root store.
+        ;;
     h)
         printf "Usage: create_subcomponent.sh -n ComponentName\n\n"
         printf "   -s: Create and import store file\n"
