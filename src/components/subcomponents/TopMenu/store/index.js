@@ -3,19 +3,19 @@ export default {
   state: {
     menu: [
       {
-        label: 'Home',
-        isActive: false,
-        path: '',
+        label: 'nav_home',
+        isActive: true,
+        path: 'home',
       },
       {
-        label: 'About Us',
+        label: 'nav_aboutus',
         isActive: false,
-        path: '',
+        path: 'about',
       },
       {
-        label: 'Contact',
+        label: 'nav_contact',
         isActive: false,
-        path: '',
+        path: 'contact',
       },
     ],
   },

@@ -7,10 +7,26 @@
     <link rel="stylesheet" href="../node_modules/bulma/css/bulma.min.css">
     <link rel="stylesheet" href="./css/custom.scss">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<style>
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+</style>
 </head>
 <body>
     <div id='app'>
-      <router-view></router-view>
+      <transition name="fade" mode="out-in" >
+          <router-view></router-view>
+      </transition>
     </div>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script src="./app.js"></script>
