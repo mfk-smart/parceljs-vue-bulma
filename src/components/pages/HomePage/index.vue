@@ -1,9 +1,8 @@
 <template lang='pug'>
     div
-        topmenu
         section.hero.is-dark.is-fullheight-with-navbar
           .hero-body
-            .is-overlay Test
+            .is-overlay.has-background-black Test
             .container
               h1.title
                 | {{ $t('home_title') }}
@@ -11,7 +10,6 @@
                 | {{ $t('home_subtitle') }}
 </template>
 <script>
-const TopMenu = () => import('../../subcomponents/TopMenu/index.vue')
 import { mapState } from 'vuex'
 
 module.exports = {
@@ -22,9 +20,6 @@ module.exports = {
     ...mapState({
       menu: state => state.TopMenu.menu,
     }),
-  },
-  components: {
-    topmenu: TopMenu,
   },
   mounted() {
     this.menu.forEach(item => {
@@ -39,12 +34,11 @@ module.exports = {
 </script>
 <style scoped>
 .is-overlay {
-  background: black;
   opacity: 0.6;
 }
 .hero-body {
   background: url(../../../images/rich-tervet-662093-unsplash.jpg);
-  background-size: 150%;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 </style>

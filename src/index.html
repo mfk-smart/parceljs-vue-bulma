@@ -22,11 +22,13 @@
 }
 </style>
 </head>
-<body>
+<body class='has-background-black'>
     <div id='app'>
+      <topmenu></topmenu>
       <transition name="fade" mode="out-in" >
           <router-view></router-view>
       </transition>
+      <footercmp></footercmp>
     </div>
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
     <script src="./app.js"></script>
