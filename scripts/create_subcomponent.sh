@@ -19,7 +19,7 @@ while getopts ":n:sh" opt; do
         cd "${subcomponent}" || exit 1
 
         #create page template
-        cat "${subcomponents_template}/index.vue" > index.vue
+        cat "${subcomponent_template}/index.vue" > index.vue
         echo "Created subcomponent directory and file!"
         ;;
     s)
