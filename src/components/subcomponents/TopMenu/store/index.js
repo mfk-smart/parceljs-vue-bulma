@@ -13,6 +13,11 @@ export default {
         path: 'about',
       },
       {
+        label: 'nav_pagewsidemenu',
+        isActive: false,
+        path: 'page-w-sidemenu',
+      },
+      {
         label: 'nav_contact',
         isActive: false,
         path: 'contact',

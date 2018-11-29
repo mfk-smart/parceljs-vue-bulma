@@ -34,7 +34,7 @@ while getopts ":n:sh" opt; do
 
         #add store import string
         sed -i '' -e '/StoreImports/ a\
-        import '"$subcomponent"' from '"'"'../components/pages/'$subcomponent'/store'"'"'
+        import '"$subcomponent"' from '"'"'../components/subcomponents/'$subcomponent'/store'"'"'
         ' $store_path
 
         #add module

@@ -11,8 +11,12 @@
 </template>
 <script>
 import { mapState } from 'vuex'
+import SideMenu from '../../../components/subcomponents/SideMenu'
 
 module.exports = {
+  components: {
+    sidemenu: SideMenu,
+  },
   computed: {
     locale() {
       return this._i18n.locale

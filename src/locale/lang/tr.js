@@ -4,6 +4,7 @@ export default {
   nav_home: 'Ana Sayfa',
   nav_aboutus: 'Hakkımızda',
   nav_contact: 'İletişim',
+  nav_pagewsidemenu: 'Yan Menülü Sayfa',
   home_title: 'TASARLA ve GELİŞTİR',
   home_subtitle: 'Daha Hızlı, Daha Şık, Daha Güvenli',
   hello: 'Merhaba',
