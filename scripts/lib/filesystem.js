@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-var self = module.exports = {
+var self = (module.exports = {
   getSourceDirectory: () => {
     return process.cwd() + '/src'
   },
@@ -8,40 +8,51 @@ var self = module.exports = {
     return self.getSourceDirectory() + '/components/pages'
   },
   getOrCreatePagesDirectory: () => {
-    const pagesDir = this.getPagesDirectory()
-    fs.stat(pagesDir, exists => {
+    const pagesDir = self.getPagesDirectory()
+    fs.stat(pagesDir, (err, exists) => {
       if (exists) {
+        //console.log('pages directory exists...')
         return pagesDir
       } else {
         fs.mkdir(pagesDir, { recursive: true }, err => {
-          if (err) throw err
+          if (err) {
+            throw err
+          } else {
+            //console.log('pages directory created...')
+            return pagesDir
+          }
         })
-        return pagesDir
       }
     })
   },
   getSubcomponentsDirectory: () => {
-    return this.getSourceDirectory() + '/components/subcomponents'
+    return self.getSourceDirectory() + '/components/subcomponents'
   },
   getOrCreateSubcomponentsDirectory: () => {
-    const subcomponentsDir = this.getSubcomponentsDirectory()
-    fs.stat(subcomponentsDir, exists => {
+    const subcomponentsDir = self.getSubcomponentsDirectory()
+    fs.stat(subcomponentsDir, (err, exists) => {
+      if (err) throw err
       if (exists) {
+        // console.log('subcomponents directory exists...')
         return subcomponentsDir
       } else {
         fs.mkdir(subcomponentsDir, { recursive: true }, err => {
-          if (err) throw err
+          if (err) {
+            throw err
+          } else {
+            // console.log('subcomponents directory created...')
+            return subcomponentsDir
+          }
         })
-        return subcomponentsDir
       }
     })
   },
 
   getStoreFilePath: () => {
-    return this.getSourceDirectory() + '/store/index.js'
+    return self.getSourceDirectory() + '/store/index.js'
   },
   getRouteFilePath: () => {
-    return this.getSourceDirectory() + '/router/index.js'
+    return self.getSourceDirectory() + '/router/index.js'
   },
   directoryExists: filePath => {
     try {
@@ -55,4 +66,4 @@ var self = module.exports = {
       if (err) throw err
     })
   },
-}
+})

@@ -3,14 +3,15 @@ const ask = require('./lib/userinput.js')
 
 const run = async () => {
   const config = await ask.pageOrSubcomponent()
-    console.log(files.getPagesDirectory())
-return false
   if (config.compType[0] === 'Page') {
     const pagesDir = files.getOrCreatePagesDirectory()
-    console.log('Directory created at ' + pagesDir)
+    const newPagesPath = pagesDir + '/' + config.compName
+    files.createDirectory(newPagesPath)
+
   } else if (config.compType[0] === 'Subcomponent') {
     const subcomponentsDir = files.getOrCreateSubcomponentsDirectory()
-    console.log('Directory created at ' + subcomponentsDir)
+    const newSubcomponentsPath = subcomponentsDir + '/' + config.compName
+    files.createDirectory(newSubcomponentsPath)
   }
 }
 
